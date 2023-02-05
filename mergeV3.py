@@ -43,7 +43,7 @@ def put watermark (input_pdf, output pdf, watermark):
 
 def merge (folder, filename):
 
-    #on.chdir(r"C:\Users\A. Phadke\OneDrive - Shell\SAP Data Comparison IM for Assets Deepwater\Test")
+    #on.chdir(r"C:\Path\Test")
 
     x= [a for a in os.listdir() if (a.endswith ((".pdf", ".PDF")) and (a.startswith ("5") and not "UNOFFICIAL COPY" in a))]
 
@@ -57,22 +57,22 @@ def merge (folder, filename):
         merger.close()
 
     put_watermark (
-            input_pdf- r"result.pdf", the original pdf
-            output pdf- filename, the modified pdf with watermark watermark "C:\Users\A. Phadke\Shell\Automation\Apps\Scripts\Consolidated\wm.pdf"
-            watermark= "C:\Users\A. Phadke\Shell\Automation\Apps\Scripts\Consolidated\wm.pdf" the watermark to be provided   
+            input_pdf = r"result.pdf", the original pdf
+            output pdf= filename #the modified pdf with watermark watermark 
+            watermark= r"C:\Paths\wm.pdf" the watermark to be provided   
         )
 
 
-#Ursa
+#Plant1
 
-data ={'fpath': ["C:\Users\A. Phadke\OneDrive Shell\SAP Data Comparison - IM for Assets Deepwater\Test\ACCESS_EGRESS",
-                 r"C:\Users\A. Phadke\OneDrive Shell\SAP Data Comparison IM for Assets Deepwater\Test\AREA CLASSIFICA",
-                 r"C:\Users\A. Phadke OneDrive - Shell\SAP Data Comparison - IM for Assets Deepwater\Test\FLOW DIAGRAM\ 660-SAFETY"],
-                 'fname': ['532A-95-55-FULL SET - UNOFFICIAL COPY.pdf', '532A-95-450-FULL SET UNOFFICIAL COPY.pdf', '532A-95-660-FULL SET - UNOFFICIAL COPY.pdf'])
+data ={'fpath': ["C:\Path\Test\ACCESS_EGRESS",
+                 r"C:\Path\Test\AREA CLASSIFICA",
+                 r"C:\Path\Test\FLOW DIAGRAM\ 660-SAFETY"],
+                 'fname': ['55-FULL SET - UNOFFICIAL COPY.pdf', '450-FULL SET UNOFFICIAL COPY.pdf', '660-FULL SET - UNOFFICIAL COPY.pdf'])
 
 df = pd.DataFrame (data)
 
-# ACCESS EGRESS
+# Any folder
 
 for ind in df.index:
     folder = df['fpath'][ind]
