@@ -11,10 +11,10 @@ def createWM():
         file.write('Printed string %s recorded at %s.\n' %
                 (scr, datetime.datetime.now()))
 
-def put watermark (input_pdf, output pdf, watermark):
+def put_watermark (input_pdf, output pdf, watermark):
     PyPDF4.PdfFileReader(input_pdf)
 
-    #reads the watermark pdf file through watermark_instance PdfFileReader (watermark)
+    #reads the watermark pdf file through watermark_instance PdfFileReader(watermark)
 
     #PdfFileReader
     watermark_instance = PdfFileReader(watermark)
